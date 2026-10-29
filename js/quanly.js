@@ -97,7 +97,7 @@ async function runAiRoomAllocation(){
     const res=await api('/ai/auto-allocate',{method:'POST'});
     const tk=res.thong_ke||{};
     let html=`<div style="display:flex;justify-content:space-between;align-items:center">
-      <h3 style="margin:0;color:#1e293b">🤖 Kết quả AI Phân bổ Chỗ ở (JSON xuất ra hệ thống)</h3>
+      <h3 style="margin:0;color:#1e293b">🤖 Kết quả AI Phân bổ Chỗ ở</h3>
       <button class="btn btn-secondary" style="font-size:12px" onclick="document.getElementById('aiAllocationBox').style.display='none'">Đóng</button>
     </div>`;
     html+=`<p style="margin:8px 0;font-size:14px"><strong>Tổng SV:</strong> ${tk.tong_sinh_vien||0} | <strong>Đã xếp:</strong> <span style="color:green;font-weight:bold">${tk.da_xep||0}</span> | <strong>Chưa xếp:</strong> <span style="color:red;font-weight:bold">${tk.chua_xep||0}</span> | <strong>Thỏa mãn nguyện vọng:</strong> ${tk.ty_le_thoa_man_nguyen_vong||'100%'}</p>`;
