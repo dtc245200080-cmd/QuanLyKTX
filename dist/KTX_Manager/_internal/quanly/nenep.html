@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý nề nếp - KTX-ICTU</title>
+<link rel="stylesheet" href="../css/quanly.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="brand">KTX-<span>ICTU</span></div>
+  <div class="nav">
+<a href="home.html">🏠 Trang chủ</a>
+<a href="cosovatchat.html">🏢 Cơ sở vật chất</a>
+<a href="sinhvien.html">👨‍🎓 Sinh viên</a>
+<a href="luutru.html">🛏 Quản lý lưu trú</a>
+<a href="hopdong.html">📄 Hợp đồng</a>
+<a href="taichinh.html">💰 Tài chính</a>
+<a href="nenep.html">📋 Nề nếp / vi phạm</a>
+<a href="phananh.html">⚠ Phản ánh / sự cố</a>
+<a href="phong.html">🚪 Quản lý phòng</a>
+<a href="tracuu.html">🔎 Tra cứu</a>
+<a href="noiquy.html">📚 Nội quy / RAG</a>
+<a href="thongke.html">📊 Thống kê</a>
+</div>
+</aside>
+<main class="content">
+  <div class="topbar">
+    <h1>Quản lý nề nếp</h1>
+    <div class="user-box"><span data-user></span> · <button class="btn btn-secondary" onclick="logout()">Đăng xuất</button></div>
+  </div>
+  
+<div class="section"><h2>Vi phạm nội quy</h2><div class="actions"><button class="btn btn-primary" onclick="addItem('biên bản vi phạm')">+ Lập biên bản</button></div>
+<table><tr><th>Mã</th><th>Sinh viên</th><th>Nội dung</th><th>Ngày</th><th>Trạng thái</th></tr>
+<tr><td>VP08</td><td>SV034</td><td>Gây ồn sau 22h</td><td>17/08/2026</td><td><span class="badge warning">Đã nhắc nhở</span></td></tr>
+<tr><td>VP09</td><td>SV052</td><td>Vi phạm khu vực chung</td><td>18/08/2026</td><td><span class="badge danger">Chờ xử lý</span></td></tr></table></div>
+
+  <footer>KTX-ICTU © 2026 · Hệ thống quản lý ký túc xá</footer>
+</main>
+</div>
+<script src="../js/auth.js"></script>
+<script src="../js/quanly.js"></script>
+</body>
+</html>

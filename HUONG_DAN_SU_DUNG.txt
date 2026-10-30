@@ -1,0 +1,64 @@
+================================================================================
+          HỆ THỐNG QUẢN LÝ KÝ TÚC XÁ TÍCH HỢP AI (KTX-AI)
+                     HƯỚNG DẪN CÀI ĐẶT & SỬ DỤNG
+================================================================================
+
+Chương trình đã được đóng gói hoàn chỉnh theo 2 hình thức để người nhận có thể chạy
+ngay lập tức tùy theo nhu cầu:
+
+--------------------------------------------------------------------------------
+CÁCH 1: CHẠY TRỰC TIẾP TỪ FILE THỰC THI (KHÔNG CẦN CÀI PYTHON)
+--------------------------------------------------------------------------------
+1. Vào thư mục:
+   dist\KTX_Manager\
+2. Nhấp đúp chuột vào file:
+   KTX_Manager.exe
+3. Chương trình sẽ tự khởi chạy máy chủ backend và tự động mở trình duyệt web đến:
+   http://127.0.0.1:8000
+4. Dữ liệu phòng, sinh viên và cấu hình được lưu tự động trong file ktx_ai.db nằm cùng
+   thư mục với file KTX_Manager.exe.
+
+--------------------------------------------------------------------------------
+CÁCH 2: CHẠY QUA BỘ KHỞI ĐỘNG 1-CLICK TỰ ĐỘNG (DÀNH CHO MÁY CÓ CÀI PYTHON)
+--------------------------------------------------------------------------------
+1. Yêu cầu: Máy tính đã cài đặt Python 3.10 trở lên.
+2. Tại thư mục gốc của dự án, nhấp đúp vào file:
+   CHAY_CHUONG_TRINH.bat
+3. File sẽ tự động kiểm tra, nếu là lần đầu tiên chạy:
+   - Tự tạo môi trường ảo (.venv).
+   - Tự động cài đặt đầy đủ tất cả các gói thư viện cần thiết (requirements.txt).
+   - Tự động tạo file cấu hình .env nếu chưa có.
+   - Khởi động máy chủ và tự bật trình duyệt web.
+4. Khi muốn tắt chương trình:
+   - Đóng cửa sổ terminal đang chạy, HOẶC
+   - Nhấp đúp vào file: DUNG_CHUONG_TRINH.bat
+
+--------------------------------------------------------------------------------
+DANH SÁCH TÀI KHOẢN MẪU ĐỂ ĐĂNG NHẬP THỬ NGHIỆM:
+--------------------------------------------------------------------------------
+1. Phân hệ Quản lý Ký túc xá:
+   - Tên đăng nhập : quanly
+   - Mật khẩu      : 123456
+   - Quyền hạn     : Quản lý phòng, duyệt đơn, xếp phòng tự động bằng AI, nề nếp...
+
+2. Phân hệ Kế toán KTX:
+   - Tên đăng nhập : ketoan
+   - Mật khẩu      : 123456
+   - Quyền hạn     : Quản lý thu chi, công nợ, hóa đơn điện nước, thống kê tài chính.
+
+3. Phân hệ Sinh viên:
+   - Tên đăng nhập : SV01   (hoặc SV2, SV03)
+   - Mật khẩu      : 123456
+   - Quyền hạn     : Xem thông tin phòng, đăng ký ở, phản ánh sự cố, Chatbot AI tư vấn nội quy.
+   * Sinh viên mới cũng có thể tự tạo tài khoản qua mục "Đăng ký" trên giao diện.
+
+--------------------------------------------------------------------------------
+CẤU HÌNH TÍNH NĂNG AI (OPENAI / RAG / OFFLINE):
+--------------------------------------------------------------------------------
+- Hệ thống đã tích hợp sẵn cơ chế xử lý AI thông minh kết hợp Fallback quy tắc nội quy
+  offline nên vẫn chạy mượt mà ngay cả khi chưa có kết nối Internet hoặc chưa có API Key.
+- Nếu muốn kích hoạt mô hình ngôn ngữ lớn OpenAI GPT-4o-mini:
+  Mở file backend/.env và điền khóa API của bạn:
+  OPENAI_API_KEY=sk-your-openai-api-key
+================================================================================
+

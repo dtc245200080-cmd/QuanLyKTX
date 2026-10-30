@@ -1,4 +1,5 @@
 
+import os
 from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -8,6 +9,7 @@ from .seed import seed
 from .routers import auth, students, rooms, stays, finance, complaints, ai, policies, contracts, stats
 
 BASE = Path(__file__).resolve().parents[2]
+BASE = Path(os.getenv("KTX_BASE_DIR", str(Path(__file__).resolve().parents[2])))
 Base.metadata.create_all(engine)
 seed()
 

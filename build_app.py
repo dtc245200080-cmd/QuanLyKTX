@@ -1,0 +1,47 @@
+import PyInstaller.__main__
+import os
+import sys
+
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+PyInstaller.__main__.run([
+    'desktop_app.py',
+    '--name=KTX_Manager',
+    '--onedir',
+    '--clean',
+    '--noconfirm',
+    f'--add-data={os.path.join(base_dir, "css")};css',
+    f'--add-data={os.path.join(base_dir, "js")};js',
+    f'--add-data={os.path.join(base_dir, "sinhvien")};sinhvien',
+    f'--add-data={os.path.join(base_dir, "quanly")};quanly',
+    f'--add-data={os.path.join(base_dir, "ketoan")};ketoan',
+    f'--add-data={os.path.join(base_dir, "index.html")};.',
+    f'--add-data={os.path.join(base_dir, "backend")};backend',
+    '--collect-all=fastapi',
+    '--collect-all=starlette',
+    '--collect-all=uvicorn',
+    '--collect-all=pydantic',
+    '--collect-all=pwdlib',
+    '--collect-all=jose',
+    '--hidden-import=sqlalchemy.sql.default_comparator',
+    '--exclude-module=PyQt5',
+    '--exclude-module=PyQt6',
+    '--exclude-module=PySide2',
+    '--exclude-module=PySide6',
+    '--exclude-module=matplotlib',
+    '--exclude-module=scipy',
+    '--exclude-module=pandas',
+    '--exclude-module=IPython',
+    '--exclude-module=notebook',
+    '--exclude-module=jupyter',
+    '--exclude-module=spyder',
+    '--exclude-module=tkinter',
+    '--exclude-module=_tkinter',
+    '--exclude-module=tornado',
+    '--exclude-module=bokeh',
+    '--exclude-module=statsmodels',
+    '--exclude-module=sphinx',
+    '--exclude-module=black',
+    '--exclude-module=yapf',
+    '--exclude-module=pytest',
+])
